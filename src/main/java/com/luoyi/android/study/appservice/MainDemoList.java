@@ -37,14 +37,14 @@ public class MainDemoList {
 			int type = parser.getEventType();
 			while(type !=XmlPullParser.END_DOCUMENT){
 				String tagName = parser.getName();
-				System.out.println("~~~~"+tagName+"  " +type+" "+demo );
 				switch(type){
 					case XmlPullParser.START_TAG:
 						if("DemoList".equals(tagName)){
 							allDemoList = new ArrayList<Demo>(16);
 						}else if("Demo".equals(tagName)){
 							demo = new Demo();
-							demo.setName(parser.getAttributeValue(0));
+							demo.setId(parser.getAttributeValue(0));
+							demo.setName(parser.getAttributeValue(1));
 						}else if("desc".equals(tagName)){
 							demo.setDesc(parser.nextText());
 						}

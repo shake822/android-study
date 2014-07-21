@@ -51,10 +51,12 @@ public class HelloAndroidActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
+				Demo demo = demoList.get(position);
 				Intent intent = new Intent();  
-		        intent.setClass(HelloAndroidActivity.this, SendSMS.class);  
-		        startActivity(intent);  
-				System.out.println(demoList.get(position).getName());
+				if("SendSMS".equals(demo.getId())){
+					intent.setClass(HelloAndroidActivity.this, SendSMS.class);  
+				}
+				startActivity(intent); 
 			}
 		});
 	}

@@ -8,14 +8,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="电话号码"
+        android:hint="@string/telNumber"
         android:inputType="numberSigned" >
 
-        <requestFocus />
     </EditText>
 
     <EditText
@@ -28,7 +26,7 @@
         android:layout_marginTop="78dp"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:hint="内容" />
+        android:hint="@string/content" />
 
     <Button
         android:id="@+id/btn_send"
@@ -38,6 +36,17 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/ed_content"
         android:layout_marginTop="66dp"
-        android:text="发送" />
+        android:text="@string/send" />
+
+    <Button
+        android:id="@+id/btn_call"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et_number"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/et_number"
+        android:layout_toRightOf="@+id/et_number"
+        android:hint="@string/call" />
 
 </RelativeLayout>

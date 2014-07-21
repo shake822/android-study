@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DemoList>
-    <Demo name="发送短信">
+    <Demo id="SendSMS" name="发短信/电话" >
         <desc>一个简单发送短信的例子</desc>
     </Demo>
 </DemoList>
