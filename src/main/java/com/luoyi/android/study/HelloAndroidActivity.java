@@ -51,6 +51,7 @@ public class HelloAndroidActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
+				
 				Demo demo = demoList.get(position);
 				Intent intent = new Intent();  
 				if("SendSMS".equals(demo.getId())){
