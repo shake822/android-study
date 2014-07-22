@@ -3,4 +3,7 @@
     <Demo id="SendSMS" name="发短信/电话" >
         <desc>一个简单发送短信的例子</desc>
     </Demo>
+    <Demo id="FileStore" name="文件存储" >
+        <desc>文件存储/sharedPreference/XML读写</desc>
+    </Demo>
 </DemoList>

@@ -5,6 +5,8 @@
     android:versionName="0.0.1-SNAPSHOT" >
 	<uses-permission  android:name="android.permission.SEND_SMS" />
 	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
@@ -23,7 +25,11 @@
          <activity
             android:name="com.luoyi.android.study.view.SendSMS"
             android:screenOrientation="portrait" >
-        </activity>
+         </activity>
+          <activity
+            android:name="com.luoyi.android.study.view.FileStore"
+            android:screenOrientation="portrait" >
+         </activity>
     </application>
 
 </manifest>

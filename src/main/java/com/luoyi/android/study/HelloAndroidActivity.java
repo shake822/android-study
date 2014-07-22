@@ -16,6 +16,7 @@ import android.widget.ListView;
 import com.luoyi.android.study.adapter.MainListViewAdapter;
 import com.luoyi.android.study.appservice.MainDemoList;
 import com.luoyi.android.study.model.Demo;
+import com.luoyi.android.study.view.FileStore;
 import com.luoyi.android.study.view.SendSMS;
 
 public class HelloAndroidActivity extends Activity {
@@ -53,15 +54,21 @@ public class HelloAndroidActivity extends Activity {
 					int position, long id) {
 				
 				Demo demo = demoList.get(position);
-				Intent intent = new Intent();  
+				
 				if("SendSMS".equals(demo.getId())){
-					intent.setClass(HelloAndroidActivity.this, SendSMS.class);  
+					startNewActivity(SendSMS.class);
+				}else if("FileStore".equals(demo.getId())){
+					startNewActivity(FileStore.class);
 				}
-				startActivity(intent); 
+				
 			}
 		});
 	}
-
+	private void startNewActivity(Class className){
+		Intent intent = new Intent();  
+		intent.setClass(HelloAndroidActivity.this, className);  
+		startActivity(intent); 
+	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

@@ -9,5 +9,9 @@
     <string name="content">内容</string>
     <string name="send">发送</string>
     <string name="call">Call</string>
+    <string name="save">保存</string>
+    <string name="read">读取</string>
+    <string name="Shared">sharedPer</string>
+    <string name="sd">SD</string>
 
 </resources>
