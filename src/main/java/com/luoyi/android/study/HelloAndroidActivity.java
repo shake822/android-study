@@ -18,6 +18,7 @@ import com.luoyi.android.study.appservice.MainDemoList;
 import com.luoyi.android.study.model.Demo;
 import com.luoyi.android.study.view.FileStore;
 import com.luoyi.android.study.view.SendSMS;
+import com.luoyi.android.study.view.SimpleAdaper;
 
 public class HelloAndroidActivity extends Activity {
 
@@ -54,17 +55,18 @@ public class HelloAndroidActivity extends Activity {
 					int position, long id) {
 				
 				Demo demo = demoList.get(position);
-				
 				if("SendSMS".equals(demo.getId())){
 					startNewActivity(SendSMS.class);
 				}else if("FileStore".equals(demo.getId())){
 					startNewActivity(FileStore.class);
+				}else if("Adapter".equals(demo.getId())){
+					startNewActivity(SimpleAdaper.class);
 				}
-				
 			}
 		});
 	}
-	private void startNewActivity(Class className){
+	
+	private void startNewActivity(Class<?> className){
 		Intent intent = new Intent();  
 		intent.setClass(HelloAndroidActivity.this, className);  
 		startActivity(intent); 

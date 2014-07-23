@@ -6,4 +6,7 @@
     <Demo id="FileStore" name="文件存储" >
         <desc>文件存储/sharedPreference/XML读写</desc>
     </Demo>
+    <Demo id="Adapter" name="Simple适配器" >
+        <desc>SimpleAdapter的简单使用</desc>
+    </Demo>
 </DemoList>
