@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -36,6 +37,14 @@ public class SendSMS extends Activity implements OnClickListener {
 		btn_call.setOnClickListener(this);
 	}
 	
+	public void backup(View view){
+		Uri uri = Uri.parse("content://sms");
+		Cursor cursor = this.getContentResolver().query(uri, new String[]{"type","body"}, null, null, null);
+		while(cursor.moveToNext()){
+			System.out.println("type ="+cursor.getString(0)+" ;body=" + cursor.getString(1));
+		}
+		cursor.close();
+	}
 	@Override
 	public void onClick(View v) {
 		 switch(v.getId()){

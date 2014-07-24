@@ -13,5 +13,6 @@
     <string name="read">读取</string>
     <string name="Shared">sharedPer</string>
     <string name="sd">SD</string>
+    <string name="backup">备份</string>
 
 </resources>

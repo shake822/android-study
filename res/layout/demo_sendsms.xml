@@ -37,7 +37,17 @@
         android:layout_below="@+id/ed_content"
         android:layout_marginTop="66dp"
         android:text="@string/send" />
-
+	
+    <Button
+        android:id="@+id/btn_backup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_send"
+        android:layout_marginTop="66dp"
+        android:onClick="backup"
+        android:text="@string/backup" />
     <Button
         android:id="@+id/btn_call"
         style="?android:attr/buttonStyleSmall"
