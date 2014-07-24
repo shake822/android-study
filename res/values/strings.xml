@@ -14,5 +14,6 @@
     <string name="Shared">sharedPer</string>
     <string name="sd">SD</string>
     <string name="backup">备份</string>
+    <string name="change">切换</string>
 
 </resources>

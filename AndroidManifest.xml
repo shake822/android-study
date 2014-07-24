@@ -9,6 +9,7 @@
 	<uses-permission android:name="android.permission.CALL_PHONE" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
@@ -34,8 +35,12 @@
             android:name="com.luoyi.android.study.view.FileStore"
             android:screenOrientation="portrait" >
          </activity>
-            <activity
+         <activity
             android:name="com.luoyi.android.study.view.SimpleAdaper"
+            android:screenOrientation="portrait" >
+         </activity>
+          <activity
+            android:name="com.luoyi.android.study.view.ShowImageView"
             android:screenOrientation="portrait" >
          </activity>
     </application>

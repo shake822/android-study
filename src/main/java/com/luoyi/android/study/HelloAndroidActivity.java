@@ -18,6 +18,7 @@ import com.luoyi.android.study.appservice.MainDemoList;
 import com.luoyi.android.study.model.Demo;
 import com.luoyi.android.study.view.FileStore;
 import com.luoyi.android.study.view.SendSMS;
+import com.luoyi.android.study.view.ShowImageView;
 import com.luoyi.android.study.view.SimpleAdaper;
 
 public class HelloAndroidActivity extends Activity {
@@ -61,6 +62,8 @@ public class HelloAndroidActivity extends Activity {
 					startNewActivity(FileStore.class);
 				}else if("Adapter".equals(demo.getId())){
 					startNewActivity(SimpleAdaper.class);
+				}else if("ShowImageView".equals(demo.getId())){
+					startNewActivity(ShowImageView.class);
 				}
 			}
 		});

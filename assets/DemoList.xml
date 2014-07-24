@@ -9,4 +9,7 @@
     <Demo id="Adapter" name="Simple适配器" >
         <desc>SimpleAdapter的简单使用</desc>
     </Demo>
+     <Demo id="ShowImageView" name="图片查看" >
+        <desc>网络图片浏览</desc>
+    </Demo>
 </DemoList>
