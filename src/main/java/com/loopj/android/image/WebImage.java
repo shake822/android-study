@@ -41,7 +41,7 @@ public class WebImage implements SmartImage {
         return bitmap;
     }
 
-    private Bitmap getBitmapFromUrl(String url) {
+    public Bitmap getBitmapFromUrl(String url) {
         Bitmap bitmap = null;
 
         try {

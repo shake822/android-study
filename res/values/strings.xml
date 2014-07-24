@@ -15,5 +15,6 @@
     <string name="sd">SD</string>
     <string name="backup">备份</string>
     <string name="change">切换</string>
+    <string name="myImage">自己写得</string>
 
 </resources>

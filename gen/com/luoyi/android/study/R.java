@@ -73,6 +73,7 @@ public final class R {
         public static final int content=0x7f050005;
         public static final int hello=0x7f050001;
         public static final int hello_world=0x7f050003;
+        public static final int myImage=0x7f05000e;
         public static final int read=0x7f050009;
         public static final int save=0x7f050008;
         public static final int sd=0x7f05000b;
