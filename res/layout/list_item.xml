@@ -9,8 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/btn_star_big_off_disable_focused" />
+        android:layout_marginLeft="10dp"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
