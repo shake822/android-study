@@ -49,6 +49,7 @@ public class HelloAndroidActivity extends Activity {
 		// 创建一个List集合，其元素是Map
 		MainListViewAdapter adapter = new MainListViewAdapter(this,demoList);
 		lv_main.setAdapter(adapter);
+		
 		lv_main.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
