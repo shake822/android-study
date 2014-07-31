@@ -12,4 +12,10 @@
      <Demo id="ShowImageView" name="图片查看" >
         <desc>网络图片浏览</desc>
     </Demo>
+     <Demo id="ShowGrid" name="Grid" >
+        <desc>Grid代码 </desc>
+    </Demo>
+     <Demo id="Notification" name="系统通知调用" >
+        <desc>系统通知栏的调用 </desc>
+    </Demo>
 </DemoList>

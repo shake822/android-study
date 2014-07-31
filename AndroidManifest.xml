@@ -43,6 +43,8 @@
             android:name="com.luoyi.android.study.view.ShowImageView"
             android:screenOrientation="portrait" >
          </activity>
+         <activity android:name="com.luoyi.android.study.view.GridViewActivity" ></activity>
+         <activity android:name="com.luoyi.android.study.view.NotificationActivity" ></activity>
     </application>
 
 </manifest>
