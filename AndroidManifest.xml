@@ -1,57 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.luoyi.android.study"
-    android:versionCode="2" 
+    android:versionCode="2"
     android:versionName="0.0.1-SNAPSHOT" >
-	<uses-permission  android:name="android.permission.SEND_SMS" />
-	<uses-permission  android:name="android.permission.READ_SMS" />
-	<uses-permission android:name="android.permission.WRITE_SMS"/>
-	<uses-permission android:name="android.permission.CALL_PHONE" />
-	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
-	<instrumentation android:name="android.test.InstrumentationTestRunner"  
-        android:targetPackage="com.luoyi.android.study"  />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.luoyi.android.study" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-        <uses-library android:name="android.test.runner" /> 
-        <activity android:name=".HelloAndroidActivity"   >
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity android:name=".HelloAndroidActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER"  />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name="com.luoyi.android.study.view.SendSMS"
             android:screenOrientation="portrait" >
-         </activity>
-          <activity
+        </activity>
+        <activity
             android:name="com.luoyi.android.study.view.FileStore"
             android:screenOrientation="portrait" >
-         </activity>
-         <activity
+        </activity>
+        <activity
             android:name="com.luoyi.android.study.view.SimpleAdaper"
             android:screenOrientation="portrait" >
-         </activity>
-          <activity
+        </activity>
+        <activity
             android:name="com.luoyi.android.study.view.ShowImageView"
             android:screenOrientation="portrait" >
-         </activity>
-         <receiver android:name="com.luoyi.android.study.broadcast.OutCallReceiver">
-             <intent-filter>
-                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
-             </intent-filter>
-         </receiver>
-	 <activity android:name="com.luoyi.android.study.view.GridViewActivity" ></activity>
-         <activity android:name="com.luoyi.android.study.view.NotificationActivity" ></activity>
+        </activity>
 
+        <receiver android:name="com.luoyi.android.study.broadcast.OutCallReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.luoyi.android.study.view.GridViewActivity" >
+        </activity>
+        <activity android:name="com.luoyi.android.study.view.NotificationActivity" >
+        </activity>
+        <activity android:name="com.luoyi.android.study.view.ActionBarActivity" 
+            android:uiOptions="splitActionBarWhenNarrow">
+             <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" />
+        </activity>
     </application>
-	
+
 </manifest>

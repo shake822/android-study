@@ -18,4 +18,7 @@
      <Demo id="Notification" name="系统通知调用" >
         <desc>系统通知栏的调用 </desc>
     </Demo>
+    <Demo id="ActionBar" name="ActionBar" >
+        <desc>ActionBar</desc>
+    </Demo>
 </DemoList>

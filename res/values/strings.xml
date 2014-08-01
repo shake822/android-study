@@ -16,5 +16,7 @@
     <string name="backup">备份</string>
     <string name="change">切换</string>
     <string name="myImage">自己写得</string>
+    <string name="action_search">查询</string>
+    <string name="action_call">打电话</string>
 
 </resources>
