@@ -17,6 +17,8 @@ import com.luoyi.android.study.adapter.MainListViewAdapter;
 import com.luoyi.android.study.appservice.MainDemoList;
 import com.luoyi.android.study.model.Demo;
 import com.luoyi.android.study.view.FileStore;
+import com.luoyi.android.study.view.GridViewActivity;
+import com.luoyi.android.study.view.NotificationActivity;
 import com.luoyi.android.study.view.SendSMS;
 import com.luoyi.android.study.view.ShowImageView;
 import com.luoyi.android.study.view.SimpleAdaper;
@@ -65,6 +67,10 @@ public class HelloAndroidActivity extends Activity {
 					startNewActivity(SimpleAdaper.class);
 				}else if("ShowImageView".equals(demo.getId())){
 					startNewActivity(ShowImageView.class);
+				}else if("ShowGrid".equals(demo.getId())){
+					startNewActivity(GridViewActivity.class);
+				}else if("Notification".equals(demo.getId())){
+					startNewActivity(NotificationActivity.class);
 				}
 			}
 		});
