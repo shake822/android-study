@@ -4,35 +4,18 @@
     <item
         android:id="@+id/action_search"
         android:icon="@drawable/ic_menu_search"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:actionViewClass="android.widget.SearchView"  
         android:title="@string/action_search"
-        android:titleCondensed="A"
-        android:showAsAction="withText|always"
-        />
+        android:titleCondensed="A"/>
     <item
         android:id="@+id/action_call"
-        android:titleCondensed="B"
         android:icon="@drawable/ic_menu_call"
-        android:showAsAction="withText|always"
-        android:title="@string/action_call">
-        <menu>
-             <item
-        android:icon="@drawable/ic_menu_search"
-        android:title="@string/action_search"
-        android:showAsAction="withText|always"
-        />
-        </menu>
-        </item>
-	<group >
-	     <item
-        android:icon="@drawable/ic_menu_search"
-        android:title="@string/action_search"
-        android:showAsAction="withText|always"
-        />
-   	 <item
-        android:icon="@drawable/ic_menu_call"
-        android:showAsAction="withText|always"
-        android:title="@string/action_call"/>
-	</group>
+        android:showAsAction="never"
+        android:title="@string/action_call"
+        android:titleCondensed="B">
+    </item>
+
     
-    
+
 </menu>

@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="19" />
 
     <instrumentation
@@ -62,10 +62,7 @@
         </activity>
         <activity android:name="com.luoyi.android.study.view.NotificationActivity" >
         </activity>
-        <activity android:name="com.luoyi.android.study.view.ActionBarActivity" 
-            android:uiOptions="splitActionBarWhenNarrow">
-             <meta-data android:name="android.support.UI_OPTIONS"
-                   android:value="splitActionBarWhenNarrow" />
+        <activity android:name="com.luoyi.android.study.view.ActionBarActivity"  >
         </activity>
     </application>
 

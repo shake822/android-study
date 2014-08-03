@@ -49,11 +49,11 @@ public class ActionBarActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demo_actionbar);
         ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("我的应用");
         actionBar.setIcon(getResources().getDrawable(R.drawable.btn_star_big_on_pressed));
         actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.action_bar));
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_blue));
     }
     
     @Override
