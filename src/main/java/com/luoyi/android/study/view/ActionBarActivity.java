@@ -9,14 +9,15 @@ package com.luoyi.android.study.view;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
+import android.app.ActionBar.Tab;
+import android.app.ActionBar.TabListener;
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
-import android.widget.ViewSwitcher.ViewFactory;
 
 import com.luoyi.android.study.R;
 
@@ -49,11 +50,17 @@ public class ActionBarActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demo_actionbar);
         ActionBar actionBar = getActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("我的应用");
         actionBar.setIcon(getResources().getDrawable(R.drawable.btn_star_big_on_pressed));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_blue));
+        
+        actionBar.addTab(actionBar.newTab().setText("Tab选项卡一").setTabListener(new MyTabListener()));
+        
+        actionBar.addTab(actionBar.newTab().setText("Tab选项卡二").setTabListener(new MyTabListener()));
+        
     }
     
     @Override
@@ -63,8 +70,6 @@ public class ActionBarActivity extends Activity {
         inflater.inflate(R.menu.main_activity_actions, menu);
         return super.onCreateOptionsMenu(menu);
     }
-    
-    
     
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -76,5 +81,42 @@ public class ActionBarActivity extends Activity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    
+    private class MyTabListener implements TabListener {
+        
+        /**
+         * @param tab
+         * @param ft
+         * @see android.app.ActionBar.TabListener#onTabSelected(android.app.ActionBar.Tab, android.app.FragmentTransaction)
+         */
+        @Override
+        public void onTabSelected(Tab tab, FragmentTransaction ft) {
+            // TODO 自动生成方法存根注释，方法实现时请删除此注释
+            
+        }
+        
+        /**
+         * @param tab
+         * @param ft
+         * @see android.app.ActionBar.TabListener#onTabUnselected(android.app.ActionBar.Tab, android.app.FragmentTransaction)
+         */
+        @Override
+        public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+            // TODO 自动生成方法存根注释，方法实现时请删除此注释
+            
+        }
+        
+        /**
+         * @param tab
+         * @param ft
+         * @see android.app.ActionBar.TabListener#onTabReselected(android.app.ActionBar.Tab, android.app.FragmentTransaction)
+         */
+        @Override
+        public void onTabReselected(Tab tab, FragmentTransaction ft) {
+            // TODO 自动生成方法存根注释，方法实现时请删除此注释
+            
+        }
+        
     }
 }
