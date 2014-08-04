@@ -17,6 +17,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 import android.widget.Toast;
 
 import com.luoyi.android.study.R;
@@ -37,7 +40,7 @@ import com.luoyi.android.study.R;
  * @since 1.0
  * @version 2014年8月1日 作者
  */
-@SuppressLint("NewApi")
+@SuppressLint({ "NewApi", "ResourceAsColor" })
 public class ActionBarActivity extends Activity {
     
     /**
@@ -56,8 +59,16 @@ public class ActionBarActivity extends Activity {
         actionBar.setIcon(getResources().getDrawable(R.drawable.btn_star_big_on_pressed));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_blue));
-        
-        actionBar.addTab(actionBar.newTab().setText("Tab选项卡一").setTabListener(new MyTabListener()));
+        Tab tab1 = actionBar.newTab();
+        tab1.setText("Tab选项卡一");
+        ImageView view = new ImageView(getApplicationContext());
+//        view.setBackground(getResources().getDrawable(R.drawable.bg_blue));
+        view.setImageResource(R.drawable.ic_launcher);
+        view.setScaleType(ScaleType.CENTER);
+//        view.setBackgroundColor(android.R.color.white);
+        tab1.setCustomView(view);
+        tab1.setTabListener(new MyTabListener());
+        actionBar.addTab(tab1);
         
         actionBar.addTab(actionBar.newTab().setText("Tab选项卡二").setTabListener(new MyTabListener()));
         

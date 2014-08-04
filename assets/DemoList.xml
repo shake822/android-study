@@ -21,4 +21,7 @@
     <Demo id="ActionBar" name="ActionBar" >
         <desc>ActionBar</desc>
     </Demo>
+       <Demo id="Spinner" name="Spinner" >
+        <desc>下拉菜单，其实我就是菜单了</desc>
+    </Demo>
 </DemoList>
