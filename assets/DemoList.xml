@@ -24,4 +24,7 @@
        <Demo id="Spinner" name="Spinner" >
         <desc>下拉菜单，其实我就是菜单了</desc>
     </Demo>
+       <Demo id="WeiXinDemo" name="WeiXinDemo" >
+        <desc>仿微信的例子，不是我做的，抄别人的</desc>
+    </Demo>
 </DemoList>

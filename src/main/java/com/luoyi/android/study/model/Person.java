@@ -2,8 +2,6 @@ package com.luoyi.android.study.model;
 
 import java.io.Serializable;
 
-import com.luoyi.android.study.R.string;
-
 public class Person implements Serializable {
 
 	/**
@@ -14,10 +12,11 @@ public class Person implements Serializable {
 	private String name;
 	private String tel;
 	private String id;
-	
-	public Person(){
-		
+
+	public Person() {
+
 	}
+
 	public Person(String id, String name, String tel) {
 		this.id = id;
 		this.name = name;
@@ -47,9 +46,9 @@ public class Person implements Serializable {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
+
 	@Override
-	public String toString(){
-		return id+" " +name+" "+tel;
+	public String toString() {
+		return id + " " + name + " " + tel;
 	}
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="login_bg_color">#f1f1f3</color>
+    <color name="login_editText_color">#475556</color>
+    <color name="login_editText_hint">#C4C7CE</color>
+    <color name="login_editText_shadow">#BFC3CA</color>
+    <color name="bule">#ff0088cc</color>
+    <color name="white">#ffffffff</color>
+    <color name="tab_default">#ffe6e6e6</color>
+    <color name="black">#ff000000</color>
+
+</resources>

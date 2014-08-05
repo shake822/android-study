@@ -25,6 +25,7 @@ import com.luoyi.android.study.view.SendSMS;
 import com.luoyi.android.study.view.ShowImageView;
 import com.luoyi.android.study.view.SimpleAdaper;
 import com.luoyi.android.study.view.SpinnerActivity;
+import com.luoyi.android.study.view.WeiXinDemoActivity;
 
 public class HelloAndroidActivity extends Activity {
     
@@ -74,6 +75,8 @@ public class HelloAndroidActivity extends Activity {
                     startNewActivity(ActionBarActivity.class);
                 } else if ("Spinner".equals(demo.getId())) {
                     startNewActivity(SpinnerActivity.class);
+                } else if ("WeiXinDemo".equals(demo.getId())) {
+                    startNewActivity(WeiXinDemoActivity.class);
                 }
             }
         });
