@@ -18,6 +18,7 @@ import com.luoyi.android.study.adapter.MainListViewAdapter;
 import com.luoyi.android.study.appservice.MainDemoList;
 import com.luoyi.android.study.model.Demo;
 import com.luoyi.android.study.view.ActionBarActivity;
+import com.luoyi.android.study.view.EditPictureActivity;
 import com.luoyi.android.study.view.FileStore;
 import com.luoyi.android.study.view.GridViewActivity;
 import com.luoyi.android.study.view.NotificationActivity;
@@ -77,6 +78,8 @@ public class HelloAndroidActivity extends Activity {
                     startNewActivity(SpinnerActivity.class);
                 } else if ("WeiXinDemo".equals(demo.getId())) {
                     startNewActivity(WeiXinDemoActivity.class);
+                } else if ("EditPicture".equals(demo.getId())) {
+                    startNewActivity(EditPictureActivity.class);
                 }
             }
         });

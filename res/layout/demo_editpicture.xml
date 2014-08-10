@@ -13,17 +13,20 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     >
+
     <Button
-     android:layout_weight="1"
-    android:layout_height="match_parent"
-    android:text="选取" 
-    android:onClick="selectPicture"
-    />
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.00"
+        android:onClick="selectPicture"
+        android:text="选取" />
+
     <Button
-     android:layout_weight="1"
-    android:layout_height="match_parent"
-    android:onClick="savePicture"
-    android:text="保存" />
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.00"
+        android:onClick="savePicture"
+        android:text="保存" />
     
 </LinearLayout>
 

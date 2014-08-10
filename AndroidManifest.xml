@@ -68,7 +68,8 @@
         </activity>
         <activity   android:name="com.luoyi.android.study.view.WeiXinDemoActivity"  >
         </activity>
-        
+          <activity  android:name="com.luoyi.android.study.view.EditPictureActivity"  >
+        </activity>
     </application>
 
 </manifest>
