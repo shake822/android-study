@@ -17,8 +17,10 @@ import android.widget.ListView;
 import com.luoyi.android.study.adapter.MainListViewAdapter;
 import com.luoyi.android.study.appservice.MainDemoList;
 import com.luoyi.android.study.model.Demo;
+import com.luoyi.android.study.utils.ChangeImgEvent;
 import com.luoyi.android.study.view.ActionBarActivity;
 import com.luoyi.android.study.view.EditPictureActivity;
+import com.luoyi.android.study.view.EventBusActivity;
 import com.luoyi.android.study.view.FileStore;
 import com.luoyi.android.study.view.GridViewActivity;
 import com.luoyi.android.study.view.NotificationActivity;
@@ -26,7 +28,10 @@ import com.luoyi.android.study.view.SendSMS;
 import com.luoyi.android.study.view.ShowImageView;
 import com.luoyi.android.study.view.SimpleAdaper;
 import com.luoyi.android.study.view.SpinnerActivity;
+import com.luoyi.android.study.view.ViewPagesActivity;
 import com.luoyi.android.study.view.WeiXinDemoActivity;
+
+import de.greenrobot.event.EventBus;
 
 public class HelloAndroidActivity extends Activity {
     
@@ -80,9 +85,14 @@ public class HelloAndroidActivity extends Activity {
                     startNewActivity(WeiXinDemoActivity.class);
                 } else if ("EditPicture".equals(demo.getId())) {
                     startNewActivity(EditPictureActivity.class);
+                } else if ("ViewPages".equals(demo.getId())) {
+                    startNewActivity(ViewPagesActivity.class);
+                } else if ("EventBus".equals(demo.getId())) {
+                    startNewActivity(EventBusActivity.class);
                 }
             }
         });
+        EventBus.getDefault().register(this);
     }
     
     private void startNewActivity(Class<?> className) {
@@ -98,4 +108,15 @@ public class HelloAndroidActivity extends Activity {
         return true;
     }
     
+    public void onEventAsync(ChangeImgEvent event) {
+        if (event.getType() == 1) {
+            System.out.println(" HelloAndroidActivity -------------+++++++++++ begin");
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(" HelloAndroidActivity -------------+++++++++++ end");
+        }
+    }
 }

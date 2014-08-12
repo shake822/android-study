@@ -127,4 +127,7 @@ public class WeiXinDemoActivity extends FragmentActivity {
         
     }
     
+    public void invokeRightFragment(String str) {
+        newAppFragment.invokeByFragmentOne(str);
+    }
 }
