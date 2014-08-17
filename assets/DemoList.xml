@@ -30,4 +30,10 @@
     <Demo id="EditPicture" name="EditPicture" >
         <desc>编辑图片</desc>
     </Demo>
+    <Demo id="ViewPages" name="ViewPages" >
+        <desc>ViewPagers</desc>
+    </Demo>
+    <Demo id="EventBus" name="EventBus">
+         <desc>EventBus _监听的一些代码</desc>
+    </Demo>
 </DemoList>

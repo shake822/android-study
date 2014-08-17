@@ -14,7 +14,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
 
@@ -51,6 +53,13 @@ public class MyAppFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.demo_weixin_myapp, null);
         gridView = (GridView) view.findViewById(R.id.grid_view);
+        ((Button) view.findViewById(R.id.btn_invokeRightFragment)).setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+                invokeRight(v);
+            }
+        });
         ArrayList<HashMap<String, Object>> lstImageItem = new ArrayList<HashMap<String, Object>>();
         for (int i = 0; i < 10; i++) {
             HashMap<String, Object> map = new HashMap<String, Object>();
@@ -71,5 +80,9 @@ public class MyAppFragment extends Fragment {
         // 添加并且显示
         gridView.setAdapter(saImageItems);
         return view;
+    }
+    
+    public void invokeRight(View view) {
+        ((WeiXinDemoActivity) getActivity()).invokeRightFragment("sdfsdfsdfsdf");
     }
 }
