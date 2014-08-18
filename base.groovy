@@ -634,4 +634,55 @@ class AA {
         compute().toUpperCase()                 
     }
 }
-//To illustrate this, lets start with an example 
+//
+
+class PersonAA {
+    String name
+    int age
+}
+
+void inviteIf(PersonAA p, Closure<Boolean> predicate) {           
+    if (predicate.call(p)) {
+    	 println p.age
+        // send invite
+        // ...
+    }
+}
+
+@groovy.transform.TypeChecked
+void failCompilation() {
+    PersonAA p = new PersonAA(name: 'Gerard', age: 55)
+    inviteIf(p) {PersonAA it ->                                        
+        it.age >= 18 // No such property: age                   
+    }
+}
+this.&failCompilation()
+
+class Computer {
+    int compute(String str) {
+        str.length()
+    }
+    String compute(int x) {
+        String.valueOf(x)
+    }
+}
+//CompileStatic后续的改变无反应
+@groovy.transform.CompileStatic
+void test() {
+    def computer = new Computer()
+    computer.with {
+        assert compute(compute('foobar')) =='6'
+    }
+}
+
+@groovy.transform.TypeChecked
+void test1(){
+	def computer = new Computer()
+	computer.with {
+		println compute("shake")
+	}
+}
+Computer.metaClass.compute={String str -> new Date()}
+def computer = new Computer() 
+this.&test()
+this.&test1()

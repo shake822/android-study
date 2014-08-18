@@ -16,16 +16,18 @@ import com.luoyi.android.study.model.Demo;
 
 /**
  * 读取Demo的资源文件
+ * 
  * @author zhaoqunqi
- *
+ * 
  */
 public class MainDemoList {
 
 	/**
 	 * 获取所有的Demo列表
 	 * 
-	 * @param inputStream XML文件流
-	 * @return List{Demo} 
+	 * @param inputStream
+	 *            XML文件流
+	 * @return List{Demo}
 	 * 
 	 */
 	public static List<Demo> getMainDemoList(InputStream inputStream) {
@@ -35,27 +37,27 @@ public class MainDemoList {
 		try {
 			parser.setInput(inputStream, "utf-8");
 			int type = parser.getEventType();
-			while(type !=XmlPullParser.END_DOCUMENT){
+			while (type != XmlPullParser.END_DOCUMENT) {
 				String tagName = parser.getName();
-				switch(type){
-					case XmlPullParser.START_TAG:
-						if("DemoList".equals(tagName)){
-							allDemoList = new ArrayList<Demo>(16);
-						}else if("Demo".equals(tagName)){
-							demo = new Demo();
-							demo.setId(parser.getAttributeValue(0));
-							demo.setName(parser.getAttributeValue(1));
-						}else if("desc".equals(tagName)){
-							demo.setDesc(parser.nextText());
-						}
-						break;
-					case XmlPullParser.END_TAG:
-						if("Demo".equals(tagName)){
-							allDemoList.add(demo);
-							demo = null;
-						}
-						break;
+				switch (type) {
+				case XmlPullParser.START_TAG:
+					if ("DemoList".equals(tagName)) {
+						allDemoList = new ArrayList<Demo>(16);
+					} else if ("Demo".equals(tagName)) {
+						demo = new Demo();
+						demo.setId(parser.getAttributeValue(0));
+						demo.setName(parser.getAttributeValue(1));
+					} else if ("desc".equals(tagName)) {
+						demo.setDesc(parser.nextText());
 					}
+					break;
+				case XmlPullParser.END_TAG:
+					if ("Demo".equals(tagName)) {
+						allDemoList.add(demo);
+						demo = null;
+					}
+					break;
+				}
 				type = parser.next();
 			}
 		} catch (XmlPullParserException e) {
