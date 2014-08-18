@@ -686,3 +686,21 @@ Computer.metaClass.compute={String str -> new Date()}
 def computer = new Computer() 
 this.&test()
 this.&test1()
+/*
+new File('/home/zhaoqunqi/groovy/笔记').eachLine('UTF-8') {
+   println it
+}
+*/
+def config = new ConfigSlurper().parse('''
+    app.date = new Date()  
+    app.age  = 42
+    app."person.age"  = 42
+    app {                  
+        name = "Test${42}"
+    }
+''')
+
+assert config.app.date instanceof Date
+assert config.app.age == 42
+assert config.app.name == 'Test42'
+assert config.app."person.age" ==42
