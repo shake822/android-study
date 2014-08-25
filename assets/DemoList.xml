@@ -36,4 +36,10 @@
     <Demo id="EventBus" name="EventBus">
          <desc>EventBus _监听的一些代码</desc>
     </Demo>
+     <Demo id="ButtonDemo" name="ButtonDemo">
+         <desc>按钮的例子</desc>
+    </Demo>
+      <Demo id="TabsDemo" name="TabsDemo">
+         <desc>TabsDemo</desc>
+    </Demo>
 </DemoList>
